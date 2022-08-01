@@ -1,0 +1,15 @@
+---
+title: "Bidimensional Leaderboards: Generate and Evaluate Language Hand in Hand"
+collection: publications
+permalink: /publication/2022-07-billboard
+excerpt: ''
+date: 2022-07
+venue: 'NAACL'
+paperurl: 'https://aclanthology.org/2022.naacl-main.259.pdf'
+citation: 'Jungo Kasai, Keisuke Sakaguchi, Ronan Le Bras, Lavinia Dunagan, Jacob Morrison, Alexander Fabbri, Yejin Choi, and Noah A. Smith. 2022. Bidimensional Leaderboards: Generate and Evaluate Language Hand in Hand. In <i>Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</i>, pages 3540–3557, Seattle, United States. Association for Computational Linguistics.'
+---
+_Abstract:_ Natural language processing researchers have identified limitations of evaluation methodology for generation tasks, with new questions raised about the validity of automatic metrics and of crowdworker judgments. Meanwhile, efforts to improve generation models tend to depend on simple n-gram overlap metrics (e.g., BLEU, ROUGE). We argue that new advances on models and metrics should each more directly benefit and inform the other. We therefore propose a generalization of leaderboards, bidimensional leaderboards (BILLBOARDs), that simultaneously tracks progress in language generation models and metrics for their evaluation. Unlike conventional unidimensional leaderboards that sort submitted systems by predetermined metrics, a BILLBOARD accepts both generators and evaluation metrics as competing entries. A BILLBOARD automatically creates an ensemble metric that selects and linearly combines a few metrics based on a global analysis across generators. Further, metrics are ranked based on their correlation with human judgments. We release four BILLBOARDs for machine translation, summarization, and image captioning.1 We demonstrate that a linear ensemble of a few diverse metrics sometimes substantially outperforms existing metrics in isolation. Our mixed-effects model analysis shows that most automatic metrics, especially the reference-based ones, overrate machine over human generation, demonstrating the importance of updating metrics as generation models become stronger (and perhaps more similar to humans) in the future.
+
+[Download paper here](https://aclanthology.org/2022.naacl-main.259.pdf)
+
+Recommended citation: Jungo Kasai, Keisuke Sakaguchi, Ronan Le Bras, Lavinia Dunagan, Jacob Morrison, Alexander Fabbri, Yejin Choi, and Noah A. Smith. 2022. Bidimensional Leaderboards: Generate and Evaluate Language Hand in Hand. In Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pages 3540–3557, Seattle, United States. Association for Computational Linguistics.
