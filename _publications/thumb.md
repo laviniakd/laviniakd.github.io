@@ -3,7 +3,7 @@ title: "Transparent Human Evaluation for Image Captioning"
 collection: publications
 permalink: /publication/2022-07-thumb
 excerpt: ''
-date: 2022-07
+date: 2022-07-01
 venue: 'NAACL'
 paperurl: 'https://aclanthology.org/2022.naacl-main.254.pdf'
 citation: 'Jungo Kasai, Keisuke Sakaguchi, Lavinia Dunagan, Jacob Morrison, Ronan Le Bras, Yejin Choi, and Noah A. Smith. 2022. Transparent Human Evaluation for Image Captioning. In <i>Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</i>, pages 3464–3478, Seattle, United States. Association for Computational Linguistics.'

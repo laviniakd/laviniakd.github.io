@@ -3,7 +3,7 @@ title: "Bidimensional Leaderboards: Generate and Evaluate Language Hand in Hand"
 collection: publications
 permalink: /publication/2022-07-billboard
 excerpt: ''
-date: 2022-07
+date: 2022-07-01
 venue: 'NAACL'
 paperurl: 'https://aclanthology.org/2022.naacl-main.259.pdf'
 citation: 'Jungo Kasai, Keisuke Sakaguchi, Ronan Le Bras, Lavinia Dunagan, Jacob Morrison, Alexander Fabbri, Yejin Choi, and Noah A. Smith. 2022. Bidimensional Leaderboards: Generate and Evaluate Language Hand in Hand. In <i>Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</i>, pages 3540–3557, Seattle, United States. Association for Computational Linguistics.'
