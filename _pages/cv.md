@@ -11,11 +11,11 @@ redirect_from:
 
 Education
 ======
-* B.S. in Computer Science with minors in English and Linguistics, University of Washington, 2022 (expected)
+* B.S. in Computer Science with minors in English and Linguistics, University of Washington, 2022
 
 Experience
 ======
-* Fall 2021-Winter 2022: Research Assistant (ongoing), University of Washington
+* Fall 2021-Winter 2022: Research Assistant, University of Washington
   * Duties: collaborating with others on a novel annotation rubric for image captioning, investigating the  efficacy of different metrics
   * Supervisor: Jungo Kasai
 
