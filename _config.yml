@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Lavinia Dunagan"
 title_separator          : "-"
 name                     : &name "Lavinia Dunagan"
-description              : &description "Incoming Information PhD student studying NLP at the University of Michigan"
+description              : &description "PhD student studying NLP at the University of Michigan School of Information"
 url                      : https://laviniakd.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "laviniakd/laviniakd.github.io"
@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Lavinia Dunagan // ləvɪnjə dʌnəgɪn"
   avatar           : "profile.png"
-  bio              : "Incoming Information PhD student studying NLP at the University of Michigan"
-  location         : "Seattle, WA"
+  bio              : "PhD student in NLP at the University of Michigan School of Information"
+  location         : "Ann Arbor, MI"
   employer         :
   googlescholar    : https://scholar.google.com/citations?user=GN8OxvgAAAAJ
-  email            : "laviniad@uw.edu"
+  email            : "laviniad@umich.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   github           : "laviniakd"
@@ -94,7 +94,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : https://www.linkedin.com/in/lavinia-dunagan/
   orcid            : " https://orcid.org/0000-0001-7331-2484"
   pinterest        :
   soundcloud       :
@@ -172,6 +172,9 @@ collections:
   artwork:
     output: true
     permalink: /:collection/:path/
+  posts:
+    output: true
+    permalink: /:collection/:path/
   # portfolio:
   #  output: false
   #  permalink: /:collection/:path/
@@ -183,16 +186,16 @@ collections:
 # Defaults
 defaults:
   # _posts
-  # - scope:
-  #     path: ""
-  #     type: posts
-  #   values:
-  #     layout: single
-  #     author_profile: true
-  #     read_time: true
-  #     comments: true
-  #     share: false
-  #     related: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: false
+      related: true
   # _pages
   - scope:
       path: ""
