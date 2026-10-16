@@ -279,24 +279,11 @@ body::after {
   z-index: 11;
 }
 
-/* A soft fade behind the trees so text scrolling under them doesn't clash. */
-html::after {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: calc(var(--pines-height) * 1.4);
-  background: linear-gradient(to bottom, transparent, var(--bg) 75%);
-  pointer-events: none;
-  z-index: 9;
-}
-
 @media (max-width: 640px) {
   :root { --pines-height: 52px; }
 }
 
 @media print {
-  html::after, body::before, body::after { display: none; }
+  body::before, body::after { display: none; }
   body { padding-bottom: 0; }
 }
