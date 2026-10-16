@@ -7,6 +7,9 @@
   --rule: #e2dfd8;
   --accent: #1f5f5b;
   --accent-hover: #12403d;
+  --pine-back: #b8cabf;
+  --pine-front: #2c5547;
+  --pines-height: 72px;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -19,6 +22,8 @@
     --rule: #2f2f33;
     --accent: #7cc4bd;
     --accent-hover: #a6dcd6;
+    --pine-back: #1f2b27;
+    --pine-front: #2b4a3f;
   }
 }
 
@@ -33,6 +38,8 @@ body {
   font-family: var(--serif);
   font-size: 18px;
   line-height: 1.6;
+  /* Room to scroll the last lines of a page above the trees. */
+  padding-bottom: var(--pines-height);
 }
 
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
@@ -229,4 +236,67 @@ details p { margin: 8px 0 0; }
   font-family: var(--sans);
   font-size: 0.8rem;
   color: var(--muted);
+}
+
+/* Pine trees pinned to the bottom of the window, over the page.
+   Two silhouette layers: a lighter row behind and a darker row in front.
+   The SVGs are used as masks so their colors come from the variables above. */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: left bottom;
+  mask-position: left bottom;
+}
+
+body::before {
+  height: var(--pines-height);
+  background: var(--pine-back);
+  -webkit-mask-image: url("/images/pines-back.svg");
+  mask-image: url("/images/pines-back.svg");
+  -webkit-mask-size: auto var(--pines-height);
+  mask-size: auto var(--pines-height);
+  z-index: 10;
+}
+
+body::after {
+  height: var(--pines-height);
+  background: var(--pine-front);
+  -webkit-mask-image: url("/images/pines-front.svg");
+  mask-image: url("/images/pines-front.svg");
+  -webkit-mask-size: auto var(--pines-height);
+  mask-size: auto var(--pines-height);
+  /* Offset so front trees sit in the gaps of the back row. */
+  -webkit-mask-position: 90px bottom;
+  mask-position: 90px bottom;
+  z-index: 11;
+}
+
+/* A soft fade behind the trees so text scrolling under them doesn't clash. */
+html::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(var(--pines-height) * 1.4);
+  background: linear-gradient(to bottom, transparent, var(--bg) 75%);
+  pointer-events: none;
+  z-index: 9;
+}
+
+@media (max-width: 640px) {
+  :root { --pines-height: 52px; }
+}
+
+@media print {
+  html::after, body::before, body::after { display: none; }
+  body { padding-bottom: 0; }
 }
