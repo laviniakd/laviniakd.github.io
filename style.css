@@ -1,0 +1,232 @@
+/* Shared styles for every page. Colors are defined once here and swapped for dark mode below. */
+
+:root {
+  --bg: #fbfaf7;
+  --text: #1d1d1f;
+  --muted: #5f5f66;
+  --rule: #e2dfd8;
+  --accent: #1f5f5b;
+  --accent-hover: #12403d;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161618;
+    --text: #e8e6e1;
+    --muted: #a3a19c;
+    --rule: #2f2f33;
+    --accent: #7cc4bd;
+    --accent-hover: #a6dcd6;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--accent-hover); }
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header and navigation */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 0 14px;
+  margin-bottom: 36px;
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+.site-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.site-nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
+
+/* Page content */
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 24px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 40px 0 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--rule);
+  font-weight: 600;
+}
+
+p { margin: 0 0 16px; }
+
+.muted { color: var(--muted); }
+
+/* Home page intro */
+
+.intro {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.intro-text { flex: 1; min-width: 0; }
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pronunciation {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: -16px 0 20px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .intro { flex-direction: column-reverse; gap: 20px; }
+  .portrait { width: 140px; height: 140px; }
+}
+
+/* Lists of publications, talks and CV entries */
+
+.entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.entries > li { margin: 0 0 22px; }
+
+.entry-title { font-weight: 600; }
+
+.entry-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.entry-meta .me { color: var(--text); font-weight: 600; }
+
+.entry-links {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.entry-links a { margin-right: 12px; }
+
+details { margin-top: 4px; font-size: 0.95rem; }
+details summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+details p { margin: 8px 0 0; }
+
+.year-heading {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 28px 0 10px;
+}
+
+/* CV page */
+
+.cv-item { margin: 0 0 16px; }
+.cv-item ul { margin: 4px 0 0; padding-left: 20px; }
+.cv-item li { margin: 2px 0; }
+
+.cv-when {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Artwork */
+
+.art {
+  margin: 0 0 32px;
+}
+
+.art canvas, .art img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* p5.js sets a fixed inline size on its canvas; let it shrink on small screens. */
+.art canvas {
+  width: 500px !important;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.art figcaption { margin-top: 8px; }
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 56px;
+  padding: 20px 0 32px;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
