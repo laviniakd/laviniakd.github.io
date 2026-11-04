@@ -248,19 +248,18 @@ details p { margin: 8px 0 0; }
   .rain {
     display: block;
     position: fixed;
-    top: 16px;
-    bottom: 16px;
-    width: min(220px, calc((100vw - 760px) / 2 - 56px));
+    top: 0;
+    bottom: 0;
+    /* Everything from the window edge to just short of the text column. */
+    width: calc((100vw - 760px) / 2 - 24px);
     overflow: hidden;
     pointer-events: none;
     background: var(--rain-bg);
-    border: 1px solid var(--rule);
-    border-radius: 10px;
     color: var(--rain-icon);
     z-index: 1;
   }
-  .rain-left { left: 24px; }
-  .rain-right { right: 24px; }
+  .rain-left { left: 0; border-right: 1px solid var(--rule); }
+  .rain-right { right: 0; border-left: 1px solid var(--rule); }
 }
 
 .rain .drop {
@@ -281,8 +280,8 @@ details p { margin: 8px 0 0; }
 }
 
 @keyframes rain-fall {
-  from { transform: translateY(-40px) rotate(0deg); }
-  to { transform: translateY(calc(100vh + 40px)) rotate(var(--spin)); }
+  from { transform: translateY(-60px) rotate(0deg); }
+  to { transform: translateY(calc(100vh + 60px)) rotate(var(--spin)); }
 }
 
 /* No motion for people who've asked their system for less: icons stay put. */

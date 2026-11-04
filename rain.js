@@ -11,7 +11,7 @@
     // photo
     '<svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><circle cx="8" cy="9.5" r="1.7"/><path d="M3.5 18l6-6 4 4 2.5-2.5 4.5 4.5"/></svg>'
   ];
-  var PER_BANNER = 18;
+  var PER_BANNER = 24;
 
   function random(min, max) { return min + Math.random() * (max - min); }
 
@@ -25,7 +25,7 @@
       drop.className = "drop";
       drop.innerHTML = ICONS[i % ICONS.length];
       drop.style.left = random(5, 85) + "%";
-      drop.style.width = drop.style.height = Math.round(random(16, 28)) + "px";
+      drop.style.width = drop.style.height = Math.round(random(24, 40)) + "px";
       drop.style.animationDuration = duration + "s";
       // A negative delay starts each icon partway down, so the banner is full from the first frame.
       drop.style.animationDelay = -random(0, duration) + "s";
