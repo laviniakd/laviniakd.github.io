@@ -250,8 +250,8 @@ details p { margin: 8px 0 0; }
     position: fixed;
     top: 0;
     bottom: 0;
-    /* Everything from the window edge to just short of the text column. */
-    width: calc((100vw - 760px) / 2 - 24px);
+    /* About 70% of the space between the window edge and the text column. */
+    width: calc(((100vw - 760px) / 2 - 24px) * 0.7);
     overflow: hidden;
     pointer-events: none;
     background: var(--rain-bg);
